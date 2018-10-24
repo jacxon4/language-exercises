@@ -4,7 +4,9 @@
 
 // Solución:
 function subsets(word) {
-  // Implementation here
+  var arr = Array.from(word).map((letter,index) => word.substr((word.length-index))).reverse();
+  arr.pop();
+  return arr;
 }
 
 // Ejemplo

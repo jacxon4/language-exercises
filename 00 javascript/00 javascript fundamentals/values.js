@@ -4,7 +4,7 @@
 
 // Solución
 function values(obj) {
-  // Implementation here
+  return Object.values(obj);
 }
 
 // Ejemplo:

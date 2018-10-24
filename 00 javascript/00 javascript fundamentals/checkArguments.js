@@ -6,7 +6,10 @@
 // Sin necesidad de usar if/else, intenta convertir el cuerpo de la función a una sola línea.
 
 function f(input) {
-  var result;
+
+  return (!!input)?input:(input === undefined)?"Unknown":"";
+
+/*   var result;
   if (input === undefined) {
     result = "Unknown";
   } else if (input === null) {
@@ -14,5 +17,10 @@ function f(input) {
   } else {
     result = input;
   }
-  return result;
+  return result; */
 };
+
+console.log(f(undefined))
+console.log(f(null))
+console.log(f(""))
+console.log(f("1"))

@@ -23,10 +23,24 @@ const eso2o = {
 // Insuficiente = entre 4 y 5
 // Muy deficiente = por debajo de 4
 
-function printAverage(classResults) {
-  // Implementation here.
+function reduceArray(prevValue, newValue) {
+  return prevValue+newValue;
 }
 
+function stringifyQualification(qualification) {
+  return (qualification===10)?'Matricula de Honor':
+  (qualification>9)?'Sobresaliente':
+  (qualification>7)?'Notable':
+  (qualification>6)?'Bien':
+  (qualification>5)?'Suficiente':
+  (qualification>4)?'Insufuciente':'Muy deficiente';
+}
+
+function printAverage(classResults) {
+  const arrValues = Object.values(classResults);
+  return stringifyQualification(arrValues.reduce(reduceArray)/arrValues.length);
+}
+console.log(printAverage(eso2o));
 // TIP: Rompe en tantas funciones auxiliares como necesites.
 // TIP: Utiliza el ejercicio "values" para extraer los valores de un objeto.
 // En Array.prototype también cuentas con otro método que podría serte de utilidad

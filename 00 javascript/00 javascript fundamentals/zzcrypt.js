@@ -8,5 +8,7 @@ var plain = "abcdefghijklmnopqrstuvwxyz";
 var cipher = "qwertyuiopasdfghjklzxcvbnm";
 
 function decrypt(secret) {
-  // Implementation here.
+  return secret.split("").map((wordLetter) => (wordLetter!==" ")?plain[cipher.indexOf(wordLetter)]:" ").join("");
 };
+
+console.log(decrypt(secret));
