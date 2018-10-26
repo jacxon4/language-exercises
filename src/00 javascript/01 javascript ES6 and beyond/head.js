@@ -4,4 +4,6 @@
 // elemento. Utiliza rest / spread.
 // TIP: Se hace en 1 línea.
 
-const head = (/* array*/ ) => {}; // Implementation here.
+const head = ([head]) => console.log(head); // Implementation here.
+
+head([1,2,3]);

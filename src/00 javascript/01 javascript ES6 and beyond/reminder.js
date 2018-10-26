@@ -10,11 +10,17 @@ class Reminder {
   }
 
   remindMe(delay) {
-    setTimeout( function() {
+    /*setTimeout( function() {
+      console.log(`Your reminder after ${delay} seconds is: ${this.text}`);
+    }, delay * 1000);*/
+    setTimeout( () => {
       console.log(`Your reminder after ${delay} seconds is: ${this.text}`);
     }, delay * 1000);
   }
 }
+
+let testReminder = new Reminder('La solución es transformar la funcion en fat arrow para que se ejecute en el contexto de creación');
+testReminder.remindMe(2);
 
 // Te animamos a que crees una nueva instancia de reminder y la utilices.
 // Escribe el mensaje que tu quieras y añade unos pocos segundos de retardo.

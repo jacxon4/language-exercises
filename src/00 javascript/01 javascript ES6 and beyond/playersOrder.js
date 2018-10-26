@@ -7,8 +7,24 @@
 // TIP: Aunque se puede resolver con el operador %, intenta idear una solución usando
 // spread/rest & destructuring.
 
-const getPlayersOrder = (players, turns) => { /* Implementation here */ }
+const getPlayersOrder = (players, turns) => {
+  let newArray = players;
+  for (let i = 0; i < turns; i++) {
+    [first, ...rest] = newArray;
+    newArray = [...rest,first];
+  }
+  return newArray;
+
+};
 
 // Un ejemplo:
-const newOrderIn2Turns = getPlayersOrder(["Ana", "Juan", "Pablo", "Lucia"], 2);
-console.log(newOrderIn2Turns); // ["Pablo", "Lucia", "Ana", "Juan"]
+let newOrderIn2Turns = getPlayersOrder(["Ana", "Juan", "Pablo", "Lucia"], 0);
+console.log(newOrderIn2Turns); // ["Ana", "Juan", "Pablo", "Lucia"]
+newOrderIn2Turns = getPlayersOrder(["Ana", "Juan", "Pablo", "Lucia"], 1);
+console.log(newOrderIn2Turns); // ["Juan", "Pablo", "Lucia", "Ana"]
+newOrderIn2Turns = getPlayersOrder(["Ana", "Juan", "Pablo", "Lucia"], 2);
+console.log(newOrderIn2Turns); // [ "Pablo", "Lucia", "Ana", "Juan"]
+newOrderIn2Turns = getPlayersOrder(["Ana", "Juan", "Pablo", "Lucia"], 3);
+console.log(newOrderIn2Turns); // ["Lucia", "Ana", "Juan","Pablo"]
+newOrderIn2Turns = getPlayersOrder(["Ana", "Juan", "Pablo", "Lucia"], 4);
+console.log(newOrderIn2Turns); // ["Ana", "Juan", "Pablo", "Lucia"]

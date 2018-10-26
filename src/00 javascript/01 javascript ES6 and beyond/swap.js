@@ -3,6 +3,7 @@
 // ¿Sabrías intercambiar el valor de estas 2 variables en una sola línea?
 let a = "A";
 let b = "B";
+[a, b] = [b,a];
 
 // Implementation here, one line, one shot!
 

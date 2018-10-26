@@ -12,3 +12,8 @@ console.log(concat([1,2],[3,4]));
 
 const concatMulti = (...args) => args.reduce((acc,elem) =>[...acc,...elem]);  // Implementation here.
 console.log(concatMulti([1,2,3,4],[5,6],[7],[8,9,10,11,12]));
+
+
+const concatMulti2 = (first, ...rest) => first.concat(...rest);  // Implementation here.
+console.log(concatMulti2([1,2,3,4],[5,6],[7],[8,9,10,11,12]));
+
