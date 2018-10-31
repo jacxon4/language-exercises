@@ -8,12 +8,11 @@
 // spread/rest & destructuring.
 
 const getPlayersOrder = (players, turns) => {
-  let newArray = players;
   for (let i = 0; i < turns; i++) {
-    [first, ...rest] = newArray;
-    newArray = [...rest,first];
+    [first, ...rest] = players;
+    players = [...rest,first];
   }
-  return newArray;
+  return players;
 
 };
 

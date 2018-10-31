@@ -15,25 +15,17 @@ class SlothMachine {
     this.coins = 0;
   }
 
-  getCoins(){
-    return this.coins;
-  }
-
-  setCoins(value){
-    this.coins = value;
-  }
-
   runRandom(){
     return [Math.random() >= 0.5,Math.random() >= 0.5,Math.random() >= 0.5];
   }
 
   play(){
-    this.setCoins(this.getCoins()+1);
+    this.coins++;
     let result = this.runRandom();
     if (result.every((elem) => elem === true))
     {
-      console.log(`Congratulations!!!. You won ${this.getCoins()} coins!!`);
-      this.setCoins(0);
+      console.log(`Congratulations!!!. You won ${this.coins} coins!!`);
+      this.coins =0;
     }else{
       console.log("Good luck next time!!");
     }

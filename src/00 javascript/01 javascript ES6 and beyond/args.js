@@ -11,7 +11,7 @@ function f( a, {b} = {}, c = 100 ) {
 // A. ¿Qué muestra por consola esta llamada?
 f("JS rocks!", {"b": "b"});
 /*
-3               --> Hay 3 argumentos de entrada cuando se llaman
+2               --> Hay 2 argumentos de entrada cuando se llaman
 JS rocks!, true --> Coincide el parametro con lo que estamos recogiendo
 b, false        --> Por destructuring coge string(b) y no son lo mismo ya que el argumento contiene todo el objeto
 100, false      --> Se inicializa la variable, pero no existe el argumento y por tanto no son iguales
