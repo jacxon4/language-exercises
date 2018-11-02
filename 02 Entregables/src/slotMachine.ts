@@ -9,8 +9,8 @@
 
 
 interface SlotMachine {
-    runRandom: () => boolean[],
-    play: () => void
+    runRandom: () => boolean[];
+    play: () => void;
 }
 
 class SlothMachine implements SlotMachine {

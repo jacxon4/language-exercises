@@ -5,8 +5,8 @@
 // Opcional : utiliza TypeScript para añadir los tipos adecuados
 
 interface book {
-    title: string,
-    isRead: boolean
+    title: string;
+    isRead: boolean;
 }
 
 const bookEvaluate = (titleToSearch: string) => (book: book):boolean => (book.title === titleToSearch) && (book.isRead === true);
