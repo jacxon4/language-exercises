@@ -28,11 +28,11 @@ const students = [
 ];
 
 
-const reduceArray = (prevValue:number, newValue: number): number  =>{
-    return prevValue+newValue;
+const reduceArray = (prevValue: number, newValue: number): number => {
+    return prevValue + newValue;
 };
 
-const mean = (values: number[]):string => (values.reduce(reduceArray)/values.length).toPrecision(3);
+const mean = (values: number[]): string => (values.reduce(reduceArray) / values.length).toPrecision(3);
 
 const scoreStudent = ({name, qualifications}: Student): StudentSummary => ({
     name,
